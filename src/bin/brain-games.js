@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-var colors = require('colors');
-console.log(`${colors.magenta('Welcome')} to the ${colors.black('Brain')} Games!`);
+import { magenta, black } from 'colors';	
+console.log(`${magenta('Welcome')} to the ${black('Brain')} Games!`);
