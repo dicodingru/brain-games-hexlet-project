@@ -1,0 +1,22 @@
+{
+  "name": "brain-games",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/bin/brain-games.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryabtsovdn/project-lvl1-s212.git"
+  },
+  "author": "DMITRY RYABTSOV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryabtsovdn/project-lvl1-s212/issues"
+  },
+  "homepage": "https://github.com/ryabtsovdn/project-lvl1-s212#readme",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
+}
