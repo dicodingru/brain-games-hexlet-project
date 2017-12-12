@@ -1,6 +1,6 @@
 install:
 	npm install
 publish:
-	sudo npm publish
+	npm publish
 start:
 	npm run babel-node -- src/bin/brain-games.js
