@@ -6,7 +6,9 @@
 ## Install
 
 Via npm:
-```sudo npm i -g di-brain-games```
+```
+sudo npm i -g di-brain-games
+```
 
 ## Usage:
 
