@@ -1,12 +1,12 @@
-import { getRandomNumber, isEven } from '../utils';
+import { getRandomNumber, isPrime } from '../utils';
 import { makeGame, run } from '../games/game';
 
-const desc = 'Answer "yes" if number even otherwise answer "no".';
+const desc = 'Is this number prime?';
 
 const funcQuestion = () => {
-  const question = getRandomNumber(10000);
+  const question = getRandomNumber(100);
   let correct;
-  if (isEven(question)) {
+  if (isPrime(question)) {
     correct = 'yes';
   } else {
     correct = 'no';

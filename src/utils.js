@@ -18,5 +18,19 @@ export const getBalancedNumber = (num) => {
 
 export const getRandomNumber = base => Math.floor(Math.random() * base);
 
+export const isEven = number => !(number % 2);
+
+export const isPrime = (number) => {
+  if (number < 2) return false;
+  if (number < 4) return true;
+  const stop = number / 2;
+  const iter = (counter) => {
+    if (number % counter === 0) return false;
+    if (counter > stop) return true;
+    return iter(counter + 1);
+  };
+  return iter(2);
+};
+
 export const getProgression = (fn, start, count) =>
   new Array(count).fill(0).map((elem, index) => fn(start + index));
