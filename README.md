@@ -4,12 +4,12 @@
 [![Build Status](https://travis-ci.org/ryabtsovdn/project-lvl1-s212.svg?branch=master)](https://travis-ci.org/ryabtsovdn/project-lvl1-s212)
 
 ## Install
----
+
 Via npm:
 ```sudo npm i -g di-brain-games```
 
 ## Usage:
----
+
 Bash commands:
 1. Even number: `brain-even`
 2. Calculate the expression: `brain-calc`
