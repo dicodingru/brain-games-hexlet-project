@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import makeCalcGame from '../games/even';
+import makeEvenGame from '../games/even';
 import { run } from '../games/game';
 
-const newEvenGame = makeCalcGame();
+const newEvenGame = makeEvenGame();
 run(newEvenGame);
