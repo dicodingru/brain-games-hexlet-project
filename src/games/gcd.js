@@ -1,4 +1,4 @@
-import getRandomNumber, { getEuclidGCD } from '../utils';
+import { getRandomNumber, getEuclidGCD } from '../utils';
 import { makeGame, run } from '../games/game';
 
 const desc = 'Find the greatest common divisor of given numbers.';

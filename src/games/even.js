@@ -1,4 +1,4 @@
-import getRandomNumber from '../utils';
+import { getRandomNumber } from '../utils';
 import { makeGame, run } from '../games/game';
 
 const desc = 'Answer "yes" if number even otherwise answer "no".';

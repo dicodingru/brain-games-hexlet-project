@@ -1,4 +1,4 @@
-import getRandomNumber, { getBalancedNumber } from '../utils';
+import { getRandomNumber, getBalancedNumber } from '../utils';
 import { makeGame, run } from '../games/game';
 
 const desc = 'Balance the given number.';

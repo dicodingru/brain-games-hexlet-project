@@ -16,4 +16,4 @@ export const getBalancedNumber = (num) => {
   return iter(numToArr).join('');
 };
 
-export default base => Math.floor(Math.random() * base);
+export const getRandomNumber = base => Math.floor(Math.random() * base);
