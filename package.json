@@ -1,6 +1,6 @@
 {
   "name": "di-brain-games",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "main": "dist/index.js",
   "bin": {
@@ -9,10 +9,11 @@
     "brain-calc": "dist/bin/brain-calc.js"
   },
   "scripts": {
+    "babel": "babel",
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
-    "eslint": "eslint ."
+    "eslint": "eslint"
   },
   "repository": {
     "type": "git",

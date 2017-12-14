@@ -1,5 +1,5 @@
-import { getRandomNumber } from '..';
-import { makeGame } from './game';
+import getRandomNumber from '../utils';
+import { makeGame, run } from './game';
 
 const desc = 'What is the result of the expression?';
 
@@ -26,4 +26,4 @@ const funcQuestion = () => {
   return [question, correct.toString()];
 };
 
-export default () => makeGame(desc, funcQuestion);
+export default () => run(makeGame(desc, funcQuestion));

@@ -1,7 +1,7 @@
 install:
 	npm install
 lint:
-	npm run eslint
+	npm run eslint .
 publish:
 	rm -rf dist
 	npm publish

@@ -1,12 +1,17 @@
-import { getRandomNumber, getYesIfEven } from '..';
-import { makeGame } from '../games/game';
+import getRandomNumber from '../utils';
+import { makeGame, run } from '../games/game';
 
 const desc = 'Answer "yes" if number even otherwise answer "no".';
 
 const funcQuestion = () => {
   const question = getRandomNumber(10000);
-  const correct = getYesIfEven(question);
-  return [question, correct.toString()];
+  let correct;
+  if (question % 2 === 0) {
+    correct = 'yes';
+  } else {
+    correct = 'no';
+  }
+  return [question, correct];
 };
 
-export default () => makeGame(desc, funcQuestion);
+export default () => run(makeGame(desc, funcQuestion));
