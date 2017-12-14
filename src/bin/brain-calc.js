@@ -1,4 +1,5 @@
-import { getRandomNumber, getUserAnswer } from '..';
+#!/usr/bin/env node
+import { getRandomNumber } from '..';
 import { makeGame, run } from '../games/game';
 
 const funcQuestion = () => {
@@ -21,10 +22,7 @@ const funcQuestion = () => {
       correct = a * b;
       break;
   }
-
-  const answer = getUserAnswer(question);
-
-  return [answer, correct.toString()];
+  return [question, correct.toString()];
 };
 
 const newCalc = makeGame('What is the result of the expression?', funcQuestion);

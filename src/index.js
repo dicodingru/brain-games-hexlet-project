@@ -21,7 +21,7 @@ export const getUserAnswer = (question) => {
   return answer;
 };
 
-export const getCorrectAnswer = (number) => {
+export const getYesIfEven = (number) => {
   if (number % 2 === 0) {
     return 'yes';
   }

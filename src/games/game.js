@@ -1,4 +1,4 @@
-import { askUserName } from '..';
+import { askUserName, getUserAnswer } from '..';
 
 export const makeGame = (desc, funcQuestion) => (message) => {
   switch (message) {
@@ -12,7 +12,7 @@ export const makeGame = (desc, funcQuestion) => (message) => {
 };
 
 const getDesc = game => game('desc');
-const getQuestion = game => game('question');
+const getQuestionAnswer = game => game('question');
 
 export const run = (game) => {
   const desc = getDesc(game);
@@ -28,10 +28,13 @@ export const run = (game) => {
       return undefined;
     }
 
-    const result = getQuestion(game)();
+    const qa = getQuestionAnswer(game)();
+    const question = qa[0];
+    const correctAnswer = qa[1];
+    const userAnswer = getUserAnswer(question);
 
-    if (result[0] !== result[1]) {
-      console.log(`\x1b[31m'${result[0]}' \x1b[0mis wrong answer ;(. Correct answer was \x1b[31m'${result[1]}'\x1b[0m.`);
+    if (userAnswer !== correctAnswer) {
+      console.log(`\x1b[31m'${userAnswer}' \x1b[0mis wrong answer ;(. Correct answer was \x1b[31m'${correctAnswer}'\x1b[0m.`);
       console.log(`Let\x1b[31m's try again, ${user}!`);
       return undefined;
     }
