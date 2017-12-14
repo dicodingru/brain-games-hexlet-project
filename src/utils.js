@@ -17,3 +17,6 @@ export const getBalancedNumber = (num) => {
 };
 
 export const getRandomNumber = base => Math.floor(Math.random() * base);
+
+export const getProgression = (fn, start, count) =>
+  new Array(count).fill(0).map((elem, index) => fn(start + index));
