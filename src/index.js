@@ -26,7 +26,7 @@ export const run = (desc, getQA) => {
   const ask = (attempt = 1) => {
     if (attempt > 3) {
       console.log(`\x1b[31mCongratulations, ${user}!`);
-      return undefined;
+      return null;
     }
 
     const qa = getQA();
@@ -37,7 +37,7 @@ export const run = (desc, getQA) => {
     if (userAnswer !== correctAnswer) {
       console.log(`\x1b[31m'${userAnswer}' \x1b[0mis wrong answer ;(. Correct answer was \x1b[31m'${correctAnswer}'\x1b[0m.`);
       console.log(`Let\x1b[31m's try again, ${user}!`);
-      return undefined;
+      return null;
     }
     console.log('\x1b[31mCorrect!');
     return ask(attempt + 1);
@@ -68,5 +68,5 @@ export const chooseTheGame = () => {
       console.log('No such option. Choose again, please.');
       return chooseTheGame();
   }
-  return undefined;
+  return null;
 };
