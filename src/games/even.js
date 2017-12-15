@@ -1,9 +1,9 @@
 import { getRandomNumber, isEven } from '../utils';
-import { makeGame, run } from '../games/game';
+import { run } from '..';
 
 const desc = 'Answer "yes" if number even otherwise answer "no".';
 
-const funcQuestion = () => {
+const getQA = () => {
   const question = getRandomNumber(10000);
   let correct;
   if (isEven(question)) {
@@ -14,4 +14,4 @@ const funcQuestion = () => {
   return [question, correct];
 };
 
-export default () => run(makeGame(desc, funcQuestion));
+export default () => run(desc, getQA);

@@ -1,9 +1,9 @@
 import { getRandomNumber, isPrime } from '../utils';
-import { makeGame, run } from '../games/game';
+import { run } from '..';
 
 const desc = 'Is this number prime?';
 
-const funcQuestion = () => {
+const getQA = () => {
   const question = getRandomNumber(100);
   let correct;
   if (isPrime(question)) {
@@ -14,4 +14,4 @@ const funcQuestion = () => {
   return [question, correct];
 };
 
-export default () => run(makeGame(desc, funcQuestion));
+export default () => run(desc, getQA);

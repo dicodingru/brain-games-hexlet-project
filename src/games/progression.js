@@ -1,9 +1,9 @@
 import { getRandomNumber, getProgression } from '../utils';
-import { makeGame, run } from '../games/game';
+import { run } from '..';
 
 const desc = 'What number is missing in this progression?';
 
-const funcQuestion = () => {
+const getQA = () => {
   const a = getRandomNumber(100);
   const d = getRandomNumber(10) + 1;
   const start = getRandomNumber(50);
@@ -16,4 +16,4 @@ const funcQuestion = () => {
   return [question, correct.toString()];
 };
 
-export default () => run(makeGame(desc, funcQuestion));
+export default () => run(desc, getQA);

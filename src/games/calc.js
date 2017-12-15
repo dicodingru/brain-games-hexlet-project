@@ -1,9 +1,9 @@
 import { getRandomNumber } from '../utils';
-import { makeGame, run } from './game';
+import { run } from '..';
 
 const desc = 'What is the result of the expression?';
 
-const funcQuestion = () => {
+const getQA = () => {
   const a = getRandomNumber(10);
   const b = getRandomNumber(10);
   const operation = getRandomNumber(3);
@@ -26,4 +26,4 @@ const funcQuestion = () => {
   return [question, correct.toString()];
 };
 
-export default () => run(makeGame(desc, funcQuestion));
+export default () => run(desc, getQA);

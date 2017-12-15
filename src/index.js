@@ -17,16 +17,37 @@ export const getUserAnswer = (question) => {
   return answer;
 };
 
-export const welcome = (description) => {
-  console.log('\x1b[31mWelcome to the Brain Games!');
-  if (description) console.log(`${description}`);
-  const userName = askUserName();
-  console.log(`Hello, ${userName}!\n`);
-  return userName;
+export const run = (desc, getQA) => {
+  console.log('\n\x1b[31mWelcome to the Brain Games!');
+  console.log(`${desc}`);
+  const user = askUserName();
+  console.log(`Hello, ${user}!\n`);
+
+  const ask = (attempt = 1) => {
+    if (attempt > 3) {
+      console.log(`\x1b[31mCongratulations, ${user}!`);
+      return undefined;
+    }
+
+    const qa = getQA();
+    const question = qa[0];
+    const correctAnswer = qa[1];
+    const userAnswer = getUserAnswer(question);
+
+    if (userAnswer !== correctAnswer) {
+      console.log(`\x1b[31m'${userAnswer}' \x1b[0mis wrong answer ;(. Correct answer was \x1b[31m'${correctAnswer}'\x1b[0m.`);
+      console.log(`Let\x1b[31m's try again, ${user}!`);
+      return undefined;
+    }
+    console.log('\x1b[31mCorrect!');
+    return ask(attempt + 1);
+  };
+
+  ask();
 };
 
 export const chooseTheGame = () => {
-  console.log('Choose the game:');
+  console.log('\x1b[31mChoose the game:');
   console.log('1. Even number');
   console.log('2. Calculate the expression');
   console.log('3. Greatest common divisor');
@@ -47,4 +68,5 @@ export const chooseTheGame = () => {
       console.log('No such option. Choose again, please.');
       return chooseTheGame();
   }
+  return undefined;
 };
