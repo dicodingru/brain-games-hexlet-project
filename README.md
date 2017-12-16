@@ -19,4 +19,3 @@ Run `brain-games` to see the list of games or run the specific game:
 4. Balance the number: `brain-balance`
 5. Guess missing number: `brain-progression`
 6. Prime number: `brain-prime`
-0. Exit
